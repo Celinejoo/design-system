@@ -1,17 +1,18 @@
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# node_modules 무시
+node_modules/
 
-# Whether you use PnP or not, the node_modules folder is often used to store
-# build artifacts that should be gitignored
-node_modules
+# 빌드 결과물 무시
+dist/
 
-# Swap the comments on the following lines if you wish to use zero-installs
-# In that case, don't forget to run `yarn config set enableGlobalCache false`!
-# Documentation here: https://yarnpkg.com/features/caching#zero-installs
+# yarn berry 캐시 무시
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
 
-#!.yarn/cache
-.pnp.*
+# IDE 설정 파일 무시
+.vscode/
+.idea/
+
+# 환경 변수 파일 무시
+.env

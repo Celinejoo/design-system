@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "declaration": true, // (1) .d.ts 타입 선언 파일 생성
+    "declarationDir": "dist", // (2) 타입 파일 저장 경로
+    "emitDeclarationOnly": false, // (3) js 파일 + d.ts 파일 둘 다 만들기
+    "outDir": "dist", // (4) 빌드 결과 저장 경로
+    "module": "ESNext", // (5) 최신 모듈 방식 (Rollup이 esm/cjs 둘 다 처리)
+    "moduleResolution": "node", // (6) node_modules 방식으로 import 해석
+    "target": "ESNext", // (7) 최신 문법까지 변환
+    "jsx": "react-jsx", // (8) React 17+ 방식으로 JSX 처리
+    "esModuleInterop": true, // (9) CommonJS 모듈 호환성
+    "skipLibCheck": true, // (10) 라이브러리 타입 검사 스킵
+    "forceConsistentCasingInFileNames": true // (11) 파일 대소문자 일관성 검사
+  },
+  "include": ["src"] // (12) src 폴더 안만 컴파일 대상으로 삼기
+}
