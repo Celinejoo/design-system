@@ -10,7 +10,9 @@
     "jsx": "react-jsx", // (8) React 17+ 방식으로 JSX 처리
     "esModuleInterop": true, // (9) CommonJS 모듈 호환성
     "skipLibCheck": true, // (10) 라이브러리 타입 검사 스킵
-    "forceConsistentCasingInFileNames": true // (11) 파일 대소문자 일관성 검사
+    "forceConsistentCasingInFileNames": true, // (11) 파일 대소문자 일관성 검사
+    "strict": true, // ⭐️ 추가!
+    "noEmit": false // ❗ (빌드할 때는 필요하니까 false 유지)
   },
   "include": ["src"] // (12) src 폴더 안만 컴파일 대상으로 삼기
 }
