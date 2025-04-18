@@ -1,9 +1,12 @@
 // src/styles/utils/generateCssVariables.ts
 
-export const generateCssVariables = (obj: object, prefix: string) => {
+export const generateCssVariables = (
+  obj: Record<string, string | Record<string, string>>,
+  prefix: string,
+) => {
   let result = "";
 
-  const process = (key: string, value: any) => {
+  const process = (key: string, value: string | Record<string, string>) => {
     if (typeof value === "object" && value !== null) {
       Object.entries(value).forEach(([nestedKey, nestedValue]) => {
         process(`${key}-${nestedKey}`, nestedValue);
