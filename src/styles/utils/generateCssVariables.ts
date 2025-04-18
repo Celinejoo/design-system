@@ -1,25 +1,20 @@
-// 색깔 정보(color tokens)를 받아서,
-// CSS 변수(--color-primary, --color-primary-100, 이런 것)를 문자열로 만들어주는 함수야.
-// 즉, 객체를  CSS 변수 문자열로 변환해주는 함수.
-//
-export const generateCssVariables = (
-  obj: Record<string, unknown>,
-  prefix = "--color",
-) => {
+// src/styles/utils/generateCssVariables.ts
+
+export const generateCssVariables = (obj: object, prefix: string) => {
   let result = "";
 
-  // Object.entries(obj)
-  // {a: 1, b: 2} 이런 객체가 있으면
-  // [['a', 1], ['b', 2]] 이렇게 배열로 바뀐다.
-
-  Object.entries(obj).forEach(([key, value]) => {
+  const process = (key: string, value: any) => {
     if (typeof value === "object" && value !== null) {
-      Object.entries(value).forEach(([shade, shadeValue]) => {
-        result += `${prefix}-${key}-${shade}: ${shadeValue};\n`;
+      Object.entries(value).forEach(([nestedKey, nestedValue]) => {
+        process(`${key}-${nestedKey}`, nestedValue);
       });
     } else {
-      result += `${prefix}-${key}: ${value};\n`;
+      result += `--${prefix}-${key}: ${value};\n`;
     }
+  };
+
+  Object.entries(obj).forEach(([key, value]) => {
+    process(key, value);
   });
 
   return result;
