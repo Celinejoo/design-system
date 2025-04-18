@@ -25,4 +25,4 @@ export const injectCssVariables = () => {
   // HTML <head> 안에 붙여 넣어버려.
 };
 
-//injectCssVariables() 함수는 개발자가 원할 때 호출된다.
+// injectCssVariables() 함수는 개발자가 원할 때 호출된다.
