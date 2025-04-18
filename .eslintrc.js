@@ -10,6 +10,7 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
+    "react/button-has-type": "off",
     "react/jsx-filename-extension": [
       "warn",
       { extensions: [".js", ".jsx", ".ts", ".tsx"] },

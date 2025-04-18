@@ -6,6 +6,7 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "dependencies": {
+    "classnames": "^2.5.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -14,7 +15,9 @@
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-typescript": "^12.1.2",
+    "@storybook/addon-actions": "^8.6.12",
     "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-links": "^8.6.12",
     "@storybook/addon-onboarding": "^8.6.12",
     "@storybook/blocks": "^8.6.12",
     "@storybook/react": "^8.6.12",
