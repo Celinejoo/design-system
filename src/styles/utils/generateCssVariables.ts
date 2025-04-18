@@ -1,16 +1,16 @@
 export const generateCssVariables = (
-  obj: Record<string, any>,
+  obj: Record<string, unknown>,
   prefix = "--color",
 ) => {
   let result = "";
 
-  for (const key in obj) {
-    if (typeof obj[key] === "object" && obj[key] !== null) {
-      for (const shade in obj[key]) {
-        result += `${prefix}-${key}-${shade}: ${obj[key][shade]};\n`;
+  for (const [key, value] of Object.entries(obj)) {
+    if (typeof value === "object" && value !== null) {
+      for (const [shade, shadeValue] of Object.entries(value)) {
+        result += `${prefix}-${key}-${shade}: ${shadeValue};\n`;
       }
     } else {
-      result += `${prefix}-${key}: ${obj[key]};\n`;
+      result += `${prefix}-${key}: ${value};\n`;
     }
   }
 
