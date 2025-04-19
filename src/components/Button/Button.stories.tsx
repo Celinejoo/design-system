@@ -16,6 +16,10 @@ const meta: Meta<typeof Button> = {
       control: { type: "radio" },
       options: ["xs", "sm", "md", "lg"],
     },
+    radius: {
+      control: { type: "radio" },
+      options: ["sm", "md", "lg", "full"],
+    },
     fullWidth: { control: "boolean" },
     disabled: { control: "boolean" },
     loading: { control: "boolean" },
@@ -23,6 +27,7 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
+
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {

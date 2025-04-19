@@ -5,12 +5,14 @@ import { ReactNode, ButtonHTMLAttributes } from "react";
 export type ButtonVariant = "primary" | "outline" | "ghost" | "danger";
 export type ButtonSize = "xs" | "sm" | "md" | "lg";
 export type ButtonType = "button" | "submit" | "reset";
+export type ButtonRadius = "none" | "sm" | "md" | "lg" | "xl" | "full";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   type?: ButtonType;
   variant?: ButtonVariant;
   size?: ButtonSize;
+  radius?: ButtonRadius;
   fullWidth?: boolean;
   loading?: boolean;
   iconLeft?: ReactNode;

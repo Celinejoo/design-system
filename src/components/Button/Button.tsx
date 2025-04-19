@@ -6,6 +6,7 @@ import { ButtonProps } from "./Button.types";
 export const Button = ({
   children,
   variant = "primary",
+  radius = "sm",
   size = "md",
   disabled = false,
   loading = false,
@@ -22,6 +23,7 @@ export const Button = ({
         styles.button,
         styles[variant],
         styles[size],
+        styles[`radius-${radius}`],
         fullWidth && styles.fullWidth,
         disabled && styles.disabled,
       )}
@@ -37,7 +39,6 @@ export const Button = ({
           {iconRight && <span className={styles.iconRight}>{iconRight}</span>}
         </>
       )}
-      버튼
     </button>
   );
 };

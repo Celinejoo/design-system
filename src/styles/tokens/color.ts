@@ -1,7 +1,7 @@
 export const lightColors = {
   black: "#000000",
-  white: "#ffffff",
-  whiteAlpha: {
+  white: {
+    0: "rgba(255,255,255)",
     50: "rgba(255,255,255,0.04)",
     100: "rgba(255,255,255,0.06)",
     200: "rgba(255, 255, 255, 0.08)",
