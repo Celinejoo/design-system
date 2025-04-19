@@ -1,5 +1,9 @@
+import { injectTypographyClasses } from "../src/styles/utils/injectTypographyClasses";
 import { injectCssVariables } from "../src/styles/utils/injectCssVariables";
+import { generateTypographyClasses } from "../src/styles/utils/generateTypographyClasses";
 injectCssVariables();
+generateTypographyClasses();
+injectTypographyClasses();
 
 /** @type { import('@storybook/react').Preview } */
 
