@@ -1,7 +1,7 @@
 // src/components/Input/Input.tsx
 import { forwardRef, useId } from "react";
 import { InputProps } from "./Input.types";
-import styles from "./Input.module.css";
+import styles from "./Input.module.scss";
 import { cx } from "../../utils/cx"; // classNames 유틸 함수
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
