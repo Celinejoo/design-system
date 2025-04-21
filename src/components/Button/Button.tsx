@@ -1,6 +1,6 @@
 // src/components/Button/Button.tsx
 import { cx } from "../../utils/cx"; // Emotion CSS-in-JS 라이브러리에서 제공하는 cx 함수
-import styles from "./Button.module.css"; // CSS 모듈을 사용하여 스타일을 적용
+import styles from "./Button.module.scss"; // CSS 모듈을 사용하여 스타일을 적용
 import { ButtonProps } from "./Button.types";
 
 export const Button = ({

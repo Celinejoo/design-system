@@ -30,6 +30,7 @@ module.exports = [
         extract: true,
         minimize: true,
         sourceMap: true,
+        use: ["sass"],
       }),
     ],
   },

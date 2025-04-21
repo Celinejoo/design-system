@@ -1,5 +1,11 @@
+import { injectTypographyClasses } from "../src/styles/utils/injectTypographyClasses";
 import { injectCssVariables } from "../src/styles/utils/injectCssVariables";
+import { generateTypographyClasses } from "../src/styles/utils/generateTypographyClasses";
+import "./../src/styles/css/reset.scss";
+
 injectCssVariables();
+generateTypographyClasses();
+injectTypographyClasses();
 
 /** @type { import('@storybook/react').Preview } */
 
