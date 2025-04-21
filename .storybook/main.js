@@ -20,5 +20,8 @@ const config = {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
+  viteFinal: (config) => {
+    return config;
+  },
 };
 export default config;
