@@ -31,6 +31,7 @@
   position: relative;
   background: transparent;
   border-bottom: 1px solid var(--color-purple-500);
+  padding-bottom: 1px;
 }
 
 /* Focus 상태 */
@@ -57,18 +58,21 @@
 
 .textarea {
   flex: 1;
+  resize: none;
   border: none;
   background: transparent;
   outline: none;
-  height: 40px;
   font-weight: var(--font-weight-400);
   color: var(--color-gray-900);
+  line-height: var(--line-height-150);
+  padding: var(--spacing-2) var(--spacing-1);
 }
 
 /* textarea 사이즈별 */
 .textarea.xs {
   height: 28px;
   font-size: var(--font-size-12);
+  padding: 2px;
 }
 
 .textarea.sm {
