@@ -1,7 +1,7 @@
+import { forwardRef, useId, useState } from "react";
 import styles from "./Checkbox.module.scss";
 import { cx } from "../../utils/cx"; //
 import { CheckboxProps } from "./Checkbox.types";
-import { forwardRef, useId, useState } from "react";
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ label = "동의합니다.", labelSize = "md", inputSize = "md", id }, ref) => {
