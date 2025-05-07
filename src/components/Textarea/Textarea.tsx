@@ -42,6 +42,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         >
           {iconLeft && <span className={styles.iconLeft}>{iconLeft}</span>}
           <textarea
+            rows={1}
             ref={ref}
             id={textareaId}
             className={cx(styles.textarea, styles[textareaSize])}
