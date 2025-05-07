@@ -8,6 +8,8 @@ export interface CheckboxProps
   labelSize?: LabelSize;
   inputSize?: InputSize;
   id?: string;
+  checked: boolean;
   disabled?: boolean; // 비활성화 여부
   onChange?: () => void;
+  name?: string;
 }
