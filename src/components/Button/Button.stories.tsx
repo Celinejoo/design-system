@@ -10,19 +10,14 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       control: { type: "radio" },
-      options: ["primary", "outline", "ghost", "danger"],
+      options: ["solid", "outline"],
     },
     size: {
       control: { type: "radio" },
       options: ["xs", "sm", "md", "lg"],
     },
-    radius: {
-      control: { type: "radio" },
-      options: ["sm", "md", "lg", "full"],
-    },
     fullWidth: { control: "boolean" },
     disabled: { control: "boolean" },
-    loading: { control: "boolean" },
   },
 };
 
@@ -30,10 +25,10 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+export const Solid: Story = {
   args: {
     children: "Primary Button",
-    variant: "primary",
+    variant: "solid",
     size: "md",
   },
 };
@@ -46,18 +41,31 @@ export const Outline: Story = {
   },
 };
 
-export const Ghost: Story = {
+export const WithLeftIcon: Story = {
   args: {
-    children: "Ghost Button",
-    variant: "ghost",
-    size: "md",
+    children: "Outline Button",
+    iconLeft: "🔍",
   },
 };
 
-export const Danger: Story = {
+export const WithRightIcon: Story = {
   args: {
-    children: "Danger Button",
-    variant: "danger",
-    size: "md",
+    children: "Outline Button",
+    iconRight: "🔍",
+  },
+};
+
+export const WithLeftRightIcon: Story = {
+  args: {
+    children: "Outline Button",
+    iconLeft: "🔍",
+    iconRight: "🔍",
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    children: "disabled Button",
+    disabled: true,
   },
 };

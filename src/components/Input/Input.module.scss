@@ -2,27 +2,27 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2);
+  border-radius: var(--spacing-1);
 }
 
 .label {
   color: var(--color-gray-900);
   font-weight: 500;
-}
 
-.label.xs {
-  font-size: var(--font-size-12);
-}
+  &.xs {
+    font-size: var(--font-size-12);
+  }
+  &.sm {
+    font-size: var(--font-size-14);
+  }
 
-.label.sm {
-  font-size: var(--font-size-14);
-}
+  &.md {
+    font-size: var(--font-size-16);
+  }
 
-.label.md {
-  font-size: var(--font-size-16);
-}
-
-.label.lg {
-  font-size: var(--font-size-18);
+  &.lg {
+    font-size: var(--font-size-18);
+  }
 }
 
 .inputWrapper {
@@ -30,85 +30,89 @@
   align-items: center;
   position: relative;
   background: transparent;
-  border-bottom: 1px solid var(--color-purple-500);
-}
+  border-radius: var(--spacing-1);
 
-/* Focus 상태 */
-.inputWrapper:focus-within {
-  border-bottom: 1px solid var(--color-purple-600);
-}
+  &.outline {
+    border: 1px solid var(--color-gray-200);
 
-/* Error 상태 */
-.inputWrapper.error {
-  border-bottom: 1px solid var(--color-red-500);
-}
+    &:focus-within {
+      border: 2px solid var(--color-red-500);
+    }
+  }
 
-/* Error + Focus 상태 */
-.inputWrapper.error:focus-within {
-  border-bottom: 1px solid var(--color-red-500);
-}
+  &.filled {
+    background-color: var(--color-gray-200);
 
-/* Disabled 상태 */
-.inputWrapper.disabled {
-  background-color: var(--color-gray-50);
-  cursor: not-allowed;
-  border: none;
+    &:focus-within {
+      border: 2px solid var(--color-red-500);
+    }
+
+    .input {
+      background-color: var(--color-gray-200);
+    }
+  }
+
+  &.fullished {
+    border-bottom: 2px solid var(--color-gray-200);
+    border-radius: 0;
+
+    &:focus-within {
+      border-bottom: 2px solid var(--color-red-500);
+    }
+
+    .input {
+      padding: 0;
+      border-radius: 0;
+    }
+  }
+  &.disabled {
+    cursor: not-allowed;
+    border: none;
+  }
 }
 
 .input {
   flex: 1;
   border: none;
-  background: transparent;
+  background: var(--color-white-0);
   outline: none;
-  height: 40px;
   font-weight: var(--font-weight-400);
-  color: var(--color-gray-900);
-}
-
-/* input 사이즈별 */
-.input.xs {
-  height: 28px;
-  font-size: var(--font-size-12);
-}
-
-.input.sm {
-  height: 32px;
-  font-size: var(--font-size-14);
-}
-
-.input.md {
-  height: 40px;
-  font-size: var(--font-size-16);
-}
-
-.input.lg {
-  height: 48px;
-  font-size: var(--font-size-18);
-}
-
-/* input 비활성화 */
-.input:disabled {
-  background-color: transparent;
   color: var(--color-gray-400);
-  cursor: not-allowed;
-}
+  border-radius: var(--spacing-1);
 
-.fullwidth {
-  width: 100%;
+  &.xs {
+    height: 24px;
+    font-size: var(--font-size-12);
+    padding: 0 var(--spacing-2);
+  }
+
+  &.sm {
+    height: 32px;
+    font-size: var(--font-size-14);
+    padding: 0 var(--spacing-3);
+  }
+
+  &.md {
+    height: 40px;
+    font-size: var(--font-size-16);
+    padding: 0 var(--spacing-4);
+  }
+
+  &.lg {
+    height: 48px;
+    font-size: var(--font-size-18);
+    padding: 0 var(--spacing-6);
+  }
+
+  &:disabled {
+    background-color: var(--color-gray-900);
+    opacity: 0.4;
+    color: var(--color-gray-400);
+    cursor: not-allowed;
+  }
 }
 
 .errorMessage {
-  margin-top: var(--spacing-2);
   color: var(--color-red-500);
   font-size: var(--font-size-12);
-}
-
-.iconLeft {
-  display: inline-flex;
-  margin-right: var(--spacing-8);
-}
-
-.iconRight {
-  display: inline-flex;
-  margin-left: var(--spacing-8);
 }

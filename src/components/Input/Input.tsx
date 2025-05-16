@@ -10,12 +10,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       label,
       labelSize = "md",
       inputSize = "md",
+      varient = "outline",
       id,
       error,
-      iconLeft,
-      iconRight,
-      fullWidth,
-      className,
       ...props
     },
     ref,
@@ -23,9 +20,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     const generatedId = useId(); // 자동 생성 ID
     const inputId = id || generatedId;
     return (
-      <div
-        className={cx(styles.wrapper, fullWidth && styles.fullWidth, className)}
-      >
+      <div className={cx(styles.wrapper)}>
         {label && (
           <label
             htmlFor={inputId}
@@ -37,18 +32,17 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         <div
           className={cx(
             styles.inputWrapper,
-            error && styles.error,
+            styles[varient],
+            styles[labelSize],
             props.disabled && styles.disabled,
           )}
         >
-          {iconLeft && <span className={styles.iconLeft}>{iconLeft}</span>}
           <input
             ref={ref}
             id={inputId}
             className={cx(styles.input, styles[inputSize])}
             {...props}
           />
-          {iconRight && <span className={styles.iconRight}>{iconRight}</span>}
         </div>
         {error && <p className={styles.errorMessage}>{error}</p>}
       </div>

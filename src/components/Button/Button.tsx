@@ -5,11 +5,9 @@ import { ButtonProps } from "./Button.types";
 
 export const Button = ({
   children,
-  variant = "primary",
-  radius = "sm",
+  variant = "solid",
   size = "md",
   disabled = false,
-  loading = false,
   iconLeft,
   iconRight,
   type = "button",
@@ -23,22 +21,23 @@ export const Button = ({
         styles.button,
         styles[variant],
         styles[size],
-        styles[`radius-${radius}`],
         fullWidth && styles.fullWidth,
         disabled && styles.disabled,
       )}
       onClick={onClick}
-      disabled={disabled || loading}
+      disabled={disabled}
     >
-      {loading ? (
-        <span className={styles.spinner} />
-      ) : (
-        <>
-          {iconLeft && <span className={styles.iconLeft}>{iconLeft}</span>}
-          <span>{children}</span>
-          {iconRight && <span className={styles.iconRight}>{iconRight}</span>}
-        </>
-      )}
+      <div>
+        {iconLeft && (
+          <span className={cx(styles.iconLeft, styles[size])}>{iconLeft}</span>
+        )}
+        <span>{children}</span>
+        {iconRight && (
+          <span className={cx(styles.iconRight, styles[size])}>
+            {iconRight}
+          </span>
+        )}
+      </div>
     </button>
   );
 };
