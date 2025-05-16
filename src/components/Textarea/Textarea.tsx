@@ -4,17 +4,7 @@ import styles from "./Textarea.module.scss";
 import { cx } from "../../utils/cx"; // classNames 유틸 함수
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  (
-    {
-      label,
-
-      id,
-
-      className,
-      ...props
-    },
-    ref,
-  ) => {
+  ({ label, id, ...props }, ref) => {
     const generatedId = useId(); // 자동 생성 ID
     const textareaId = id ?? generatedId;
     return (

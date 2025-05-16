@@ -13,7 +13,6 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       varient = "outline",
       id,
       error,
-      className,
       ...props
     },
     ref,

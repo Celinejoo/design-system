@@ -27,7 +27,7 @@ export const Button = ({
       onClick={onClick}
       disabled={disabled}
     >
-      <>
+      <div>
         {iconLeft && (
           <span className={cx(styles.iconLeft, styles[size])}>{iconLeft}</span>
         )}
@@ -37,7 +37,7 @@ export const Button = ({
             {iconRight}
           </span>
         )}
-      </>
+      </div>
     </button>
   );
 };
