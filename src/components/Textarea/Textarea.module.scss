@@ -5,24 +5,7 @@
 }
 
 .label {
-  color: var(--color-gray-900);
-  font-weight: 500;
-}
-
-.label.xs {
-  font-size: var(--font-size-12);
-}
-
-.label.sm {
-  font-size: var(--font-size-14);
-}
-
-.label.md {
-  font-size: var(--font-size-16);
-}
-
-.label.lg {
-  font-size: var(--font-size-18);
+  color: var(--color-gray-400);
 }
 
 .textareaWrapper {
@@ -30,89 +13,36 @@
   align-items: center;
   position: relative;
   background: transparent;
-  border-bottom: 1px solid var(--color-purple-500);
-  padding-bottom: 1px;
-}
+  border: 1px solid var(--color-gray-200);
+  border-radius: 6px;
 
-/* Focus 상태 */
-.textareaWrapper:focus-within {
-  border-bottom: 1px solid var(--color-purple-600);
-}
+  &:focus-within {
+    border: 1px solid var(--color-red-500);
+  }
 
-/* Error 상태 */
-.textareaWrapper.error {
-  border-bottom: 1px solid var(--color-red-500);
-}
-
-/* Error + Focus 상태 */
-.textareaWrapper.error:focus-within {
-  border-bottom: 1px solid var(--color-red-500);
-}
-
-/* Disabled 상태 */
-.textareaWrapper.disabled {
-  background-color: var(--color-gray-50);
-  cursor: not-allowed;
-  border: none;
+  &.disabled {
+    background-color: var(--color-gray-50);
+    cursor: not-allowed;
+    border: none;
+  }
 }
 
 .textarea {
   flex: 1;
   resize: none;
   border: none;
-  background: transparent;
   outline: none;
-  font-weight: var(--font-weight-400);
   color: var(--color-gray-900);
-  line-height: var(--line-height-150);
-  padding: var(--spacing-2) var(--spacing-1);
-}
-
-/* textarea 사이즈별 */
-.textarea.xs {
-  height: 28px;
-  font-size: var(--font-size-12);
-  padding: 2px;
-}
-
-.textarea.sm {
-  height: 32px;
+  background: var(color-white);
+  padding: var(--spacing-2);
+  border-radius: 6px;
   font-size: var(--font-size-14);
-}
+  font-weight: var(--font-weight-400);
+  line-height: var(--line-height-150);
 
-.textarea.md {
-  height: 40px;
-  font-size: var(--font-size-16);
-}
-
-.textarea.lg {
-  height: 48px;
-  font-size: var(--font-size-18);
-}
-
-/* textarea 비활성화 */
-.textarea:disabled {
-  background-color: transparent;
-  color: var(--color-gray-400);
-  cursor: not-allowed;
-}
-
-.fullwidth {
-  width: 100%;
-}
-
-.errorMessage {
-  margin-top: var(--spacing-2);
-  color: var(--color-red-500);
-  font-size: var(--font-size-12);
-}
-
-.iconLeft {
-  display: inline-flex;
-  margin-right: var(--spacing-8);
-}
-
-.iconRight {
-  display: inline-flex;
-  margin-left: var(--spacing-8);
+  &:disabled {
+    background-color: var(--color-blackAlpha-500);
+    color: var(--color-gray-400);
+    cursor: not-allowed;
+  }
 }

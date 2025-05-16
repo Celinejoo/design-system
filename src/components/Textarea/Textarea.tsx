@@ -7,13 +7,9 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   (
     {
       label,
-      labelSize = "md",
-      textareaSize = "md",
+
       id,
-      error,
-      iconLeft,
-      iconRight,
-      fullWidth,
+
       className,
       ...props
     },
@@ -22,35 +18,25 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     const generatedId = useId(); // 자동 생성 ID
     const textareaId = id ?? generatedId;
     return (
-      <div
-        className={cx(styles.wrapper, fullWidth && styles.fullWidth, className)}
-      >
+      <div className={cx(styles.wrapper)}>
         {label && (
-          <label
-            htmlFor={textareaId}
-            className={cx(styles.label, styles[labelSize])}
-          >
+          <label htmlFor={textareaId} className={cx(styles.label)}>
             {label}
           </label>
         )}
         <div
           className={cx(
             styles.textareaWrapper,
-            error && styles.error,
             props.disabled && styles.disabled,
           )}
         >
-          {iconLeft && <span className={styles.iconLeft}>{iconLeft}</span>}
           <textarea
-            rows={1}
             ref={ref}
             id={textareaId}
-            className={cx(styles.textarea, styles[textareaSize])}
+            className={cx(styles.textarea)}
             {...props}
           />
-          {iconRight && <span className={styles.iconRight}>{iconRight}</span>}
         </div>
-        {error && <p className={styles.errorMessage}>{error}</p>}
       </div>
     );
   },
