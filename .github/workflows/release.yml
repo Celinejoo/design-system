@@ -1,0 +1,39 @@
+name: Release to NPM
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Enable Corepack (for Yarn Berry)
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Build library with Rollup
+        run: yarn build
+
+      - name: Release to NPM via semantic-release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+# | 섹션                     | 설명                                    |
+# | ---------------------- | ------------------------------------- |
+# | `on: push → main`      | `main` 브랜치에 push될 때만 실행됩니다            |
+# | `permissions: write`   | GitHub Release를 만들기 위해 필요             |
+# | `corepack enable`      | Yarn v4 (Berry) 사용을 위한 필수 명령          |
+# | `yarn build`           | `rollup -c` 실행 (라이브러리 번들링)            |
+# | `npx semantic-release` | 자동 버전 결정 + CHANGELOG 생성 + NPM publish |
