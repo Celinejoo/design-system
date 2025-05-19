@@ -13,7 +13,10 @@ export const Button = ({
   type = "button",
   fullWidth = false,
   onClick,
-}: ButtonProps) => {
+  ariaLabel,
+}: ButtonProps & { ariaLabel?: string }) => {
+  const isIconOnly = !!iconLeft && !children && !iconRight;
+
   return (
     <button
       type={type ?? "button"}
@@ -23,21 +26,19 @@ export const Button = ({
         styles[size],
         fullWidth && styles.fullWidth,
         disabled && styles.disabled,
+        isIconOnly && styles.iconOnly,
       )}
       onClick={onClick}
       disabled={disabled}
+      aria-label={isIconOnly ? ariaLabel : undefined}
     >
-      <div>
-        {iconLeft && (
-          <span className={cx(styles.iconLeft, styles[size])}>{iconLeft}</span>
-        )}
-        <span>{children}</span>
-        {iconRight && (
-          <span className={cx(styles.iconRight, styles[size])}>
-            {iconRight}
-          </span>
-        )}
-      </div>
+      {iconLeft && (
+        <span className={cx(styles.iconLeft, styles[size])}>{iconLeft}</span>
+      )}
+      {children && <span>{children}</span>}
+      {iconRight && (
+        <span className={cx(styles.iconRight, styles[size])}>{iconRight}</span>
+      )}
     </button>
   );
 };

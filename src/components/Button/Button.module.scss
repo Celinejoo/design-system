@@ -40,6 +40,18 @@
     }
   }
 
+  &.iconOnly {
+    padding: 0;
+    justify-content: center;
+
+    .iconLeft {
+      margin-right: 0;
+    }
+    .iconRight {
+      margin-left: 0;
+    }
+  }
+
   &.outline {
     background-color: transparent;
     color: var(--color-blue-500);

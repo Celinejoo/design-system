@@ -25,6 +25,14 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
+export const isIconOnly: Story = {
+  args: {
+    size: "md",
+    iconLeft: "🔍",
+    ariaLabel: "Search",
+  },
+};
+
 export const Solid: Story = {
   args: {
     children: "Primary Button",
