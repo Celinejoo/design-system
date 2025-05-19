@@ -1,1 +1,8 @@
-<base href="/design-system/" />
+<!-- <base href="/design-system/" /> -->
+<script>
+  if (location.hostname !== "localhost") {
+    const base = document.createElement("base");
+    base.setAttribute("href", "/design-system/");
+    document.head.appendChild(base);
+  }
+</script>
