@@ -67,7 +67,14 @@
     <link href="./sb-addons/onboarding-9/manager-bundle.js" rel="modulepreload" />
     
     <link href="./sb-addons/chromatic-com-storybook-10/manager-bundle.js" rel="modulepreload" />
-      <base href="/design-system/" />
+      <!-- <base href="/design-system/" /> -->
+<script>
+  if (location.hostname !== "localhost") {
+    const base = document.createElement("base");
+    base.setAttribute("href", "/design-system/");
+    document.head.appendChild(base);
+  }
+</script>
  
 
     <style>
