@@ -1,0 +1,9 @@
+# 1.0.0 (2025-05-19)
+
+
+### Bug Fixes
+
+* base path 설정으로 GitHub Pages에서 스토리북 표시 오류 해결 ([90a9eca](https://github.com/Celinejoo/design-system/commit/90a9eca822791849ccef4f51ed6ef8751272dda9))
+* **ci:** grant write permission to GITHUB_TOKEN" ([e469834](https://github.com/Celinejoo/design-system/commit/e469834ec2d72418601b5baf5027e44355a7c14a))
+* spaced-comment rule 오류 수정 ([f423cfd](https://github.com/Celinejoo/design-system/commit/f423cfdf8d1665622ab0160d84d0e3074fd0d9a5))
+* yarn lock ([df85302](https://github.com/Celinejoo/design-system/commit/df85302698157add5f5947a78577499948fb9258))
