@@ -1,7 +1,7 @@
 import { InputHTMLAttributes } from "react";
 
-export type InputSize = "xs" | "sm" | "md" | "lg";
-export type LabelSize = "xs" | "sm" | "md" | "lg";
+export type InputSize = "sm" | "md" | "lg";
+export type LabelSize = "sm" | "md" | "lg";
 export interface CheckboxProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, "size"> {
   label?: string; // 라벨 텍스트 (optional)

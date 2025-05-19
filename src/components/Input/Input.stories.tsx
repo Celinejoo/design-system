@@ -6,8 +6,13 @@ const meta: Meta<typeof Input> = {
   component: Input,
   tags: ["autodocs"],
   args: {
-    label: "아이디",
-    placeholder: "아이디를 입력하세요",
+    placeholder: "placeholder",
+  },
+  argTypes: {
+    inputSize: {
+      control: { type: "radio" },
+      options: ["xs", "sm", "md", "lg"],
+    },
   },
 };
 
@@ -16,33 +21,21 @@ type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {};
 
-export const Sizes: Story = {
-  render: () => (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "16px",
-        width: "300px",
-      }}
-    >
-      <Input
-        label="XS"
-        labelSize="xs"
-        inputSize="xs"
-        placeholder="extra small"
-      />
-      <Input label="SM" labelSize="sm" inputSize="sm" placeholder="small" />
-      <Input label="MD" labelSize="md" inputSize="md" placeholder="medium" />
-      <Input label="LG" labelSize="lg" inputSize="lg" placeholder="large" />
-    </div>
-  ),
+export const Outline: Story = {
+  args: {
+    varient: "outline",
+  },
 };
 
-export const WithIcon: Story = {
+export const Filled: Story = {
   args: {
-    iconLeft: "🔍",
-    placeholder: "검색어를 입력하세요",
+    varient: "filled",
+  },
+};
+
+export const Fullished: Story = {
+  args: {
+    varient: "fullished",
   },
 };
 
@@ -59,13 +52,5 @@ export const Disabled: Story = {
     label: "비밀번호",
     placeholder: "비밀번호를 입력하세요",
     disabled: true,
-  },
-};
-
-export const FullWidth: Story = {
-  args: {
-    label: "이름",
-    placeholder: "이름을 입력하세요",
-    fullWidth: true,
   },
 };
