@@ -1,3 +1,11 @@
+## [1.2.2](https://github.com/Celinejoo/design-system/compare/v1.2.1...v1.2.2) (2025-05-20)
+
+
+### Bug Fixes
+
+* rollup fix ([c82a753](https://github.com/Celinejoo/design-system/commit/c82a753ae23495f77a1989159d56ac61a7615b31))
+* rollup fix ([fb56d27](https://github.com/Celinejoo/design-system/commit/fb56d27dcfaf5388b5214f235f72d1d86ca07874))
+
 ## [1.2.1](https://github.com/Celinejoo/design-system/compare/v1.2.0...v1.2.1) (2025-05-20)
 
 
