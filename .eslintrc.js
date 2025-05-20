@@ -1,5 +1,5 @@
 module.exports = {
-  parser: "@typescript-eslint/parser", // ⭐️ 이 줄 꼭 있어야 해
+  parser: "@typescript-eslint/parser",
   extends: [
     "airbnb",
     "airbnb/hooks",
@@ -23,9 +23,17 @@ module.exports = {
     "react/function-component-definition": [
       "error",
       {
-        namedComponents: "arrow-function", // ⭐️ 요거 추가!
-        unnamedComponents: "arrow-function", // ⭐️ 요것도!
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
       },
     ],
   },
+  overrides: [
+    {
+      files: ["*.stories.tsx"],
+      rules: {
+        "import/no-extraneous-dependencies": "off",
+      },
+    },
+  ],
 };

@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacing-2);
+  background: var(--color-white-500);
+  border: none;
+  text-align: left;
+  font-size: var(--font-size-14);
+  cursor: pointer;
+
+  &.start {
+    justify-self: start;
+  }
+
+  &.end {
+    justify-self: end;
+  }
+}
+
+.panel {
+  padding: var(--spacing-2);
+  text-align: left;
+  font-size: var(--font-size-14);
+  background: #fff;
+  transition: all 0.3s ease;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.item + .item {
+  border-top: 1px solid;
+  border-color: var(--color-gray-500);
+}
+
+.arrow {
+  &.open {
+    transform: rotate(180deg);
+  }
+}
