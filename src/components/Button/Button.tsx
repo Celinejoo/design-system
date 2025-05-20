@@ -14,7 +14,7 @@ export const Button = ({
   fullWidth = false,
   onClick,
   ariaLabel,
-}: ButtonProps & { ariaLabel?: string }) => {
+}: ButtonProps) => {
   const isIconOnly = !!iconLeft && !children && !iconRight;
 
   return (
