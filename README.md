@@ -30,21 +30,30 @@ yarn build # 라이브러리 번들 빌드 (Rollup)</br>
 yarn lint # ESLint 코드 검사</br>
 yarn type-check # 타입 검사 (tsc)
 
-## 폴더구조
+## 📁 폴더 구조
 
-.</br>
-├── src/ </br>
-│ ├── components/ # 각 UI 컴포넌트 디렉토리 (Button, Checkbox 등)</br>
-│ │ ├── Button.modules.scss/</br>
-│ │ └── Button.stories.tsx/</br>
-│ │ ├── Button.tsx/</br>
-│ │ ├── Button.types.tsx/</br>
-│ │ ├── index.ts/</br>
-│ ├── styles/</br>
-│ │ ├── css/</br>
-│ │ └── tokens/ # 디자인 토큰 정의 (color, foundation, typography 등)</br>
-│ │ ├── utils/ # 토큰 관련 유틸 함수</br>
-│ ├── utils/ # 공통 유틸 함수 (cx.ts 등)</br>
-├── dist/ # 빌드 결과 (출시 대상)</br>
-├── package.json</br>
-└── README.md</br>
+```
+.
+├── src/
+│   ├── components/                # 각 UI 컴포넌트 디렉토리 (Button, Checkbox 등)
+│   │   ├── Button/
+│   │   │   ├── Button.module.scss
+│   │   │   ├── Button.stories.tsx
+│   │   │   ├── Button.tsx
+│   │   │   ├── Button.types.ts
+│   │   │   └── index.ts
+│   │   └── ...
+│   ├── styles/
+│   │   ├── css/                   # reset, normalize 등
+│   │   └── tokens/                # 디자인 토큰 정의
+│   │       ├── color.ts
+│   │       ├── foundation.ts
+│   │       ├── typography/
+│   │       │   ├── typography.ts
+│   │       │   └── typographyVars.ts
+│   │       └── utils/             # 토큰 관련 유틸 함수
+│   ├── utils/                     # 공통 유틸 함수 (예: cx.ts)
+├── dist/                          # 빌드 결과 (출시 대상)
+├── package.json
+└── README.md
+```
