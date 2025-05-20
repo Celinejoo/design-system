@@ -13,7 +13,10 @@ export const Button = ({
   type = "button",
   fullWidth = false,
   onClick,
+  ariaLabel,
 }: ButtonProps) => {
+  const isIconOnly = !!iconLeft && !children && !iconRight;
+
   return (
     <button
       type={type ?? "button"}
@@ -23,9 +26,11 @@ export const Button = ({
         styles[size],
         fullWidth && styles.fullWidth,
         disabled && styles.disabled,
+        isIconOnly && styles.iconOnly,
       )}
       onClick={onClick}
       disabled={disabled}
+      aria-label={isIconOnly ? ariaLabel : undefined}
     >
       <div>
         {iconLeft && (
