@@ -22,7 +22,21 @@ export const Default: Story = {
       </AccordionItem>
       <AccordionItem>
         <AccordionHeader align="start">질문</AccordionHeader>
-        <AccordionPanel>답변</AccordionPanel>
+        <AccordionPanel>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          distinctio nesciunt hic soluta voluptatum fugiat eligendi omnis,
+          molestiae molestias! Beatae, ex assumenda! Obcaecati minima iste
+          pariatur neque. Dolorem, iusto libero!
+        </AccordionPanel>
+      </AccordionItem>
+      <AccordionItem>
+        <AccordionHeader align="start">질문</AccordionHeader>
+        <AccordionPanel>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          distinctio nesciunt hic soluta voluptatum fugiat eligendi omnis,
+          molestiae molestias! Beatae, ex assumenda! Obcaecati minima iste
+          pariatur neque. Dolorem, iusto libero!
+        </AccordionPanel>
       </AccordionItem>
     </Accordion>
   ),
