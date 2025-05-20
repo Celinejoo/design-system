@@ -32,7 +32,7 @@ yarn type-check # 타입 검사 (tsc)
 
 ## 폴더구조
 
-.
+.</br>
 ├── src/ </br>
 │ ├── components/ # 각 UI 컴포넌트 디렉토리 (Button, Checkbox 등)</br>
 │ │ ├── Button.modules.scss/</br>
