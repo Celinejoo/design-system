@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Celinejoo/design-system/compare/v1.0.0...v1.1.0) (2025-05-20)
+
+
+### Features
+
+* initial release ([d913344](https://github.com/Celinejoo/design-system/commit/d91334454321cdf4ad190b45bb482e4d7d0142b0))
+
 # 1.0.0 (2025-05-19)
 
 
