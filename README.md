@@ -55,5 +55,5 @@ yarn type-check # 타입 검사 (tsc)
 │   ├── utils/                     # 공통 유틸 함수 (예: cx.ts)
 ├── dist/                          # 빌드 결과 (출시 대상)
 ├── package.json
-└── README.md
+└── README.md #readme
 ```
