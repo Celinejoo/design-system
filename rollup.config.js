@@ -4,7 +4,6 @@ const commonjs = require("@rollup/plugin-commonjs");
 const typescript = require("@rollup/plugin-typescript");
 const postcss = require("rollup-plugin-postcss");
 const dts = require("rollup-plugin-dts").default;
-const postcssCustomProperties = require("postcss-custom-properties");
 
 module.exports = [
   {
@@ -32,11 +31,6 @@ module.exports = [
         minimize: true,
         sourceMap: true,
         use: ["sass"],
-        plugins: [
-          postcssCustomProperties({
-            preserve: false,
-          }),
-        ],
       }),
     ],
   },
