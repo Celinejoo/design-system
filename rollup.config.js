@@ -34,7 +34,9 @@ module.exports = [
         sourceMap: true,
         use: ["sass"],
         plugins: [
-          postcssCustomProperties(), // ⚠️ var(--xxx) → 값으로 변환
+          postcssCustomProperties({
+            preserve: false,
+          }),
         ],
       }),
       copy({
