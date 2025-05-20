@@ -1,13 +1,19 @@
+.accordion {
+  border-bottom: 1px solid;
+  border-color: var(--color-gray-300);
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: var(--spacing-2);
+  padding: 10px var(--spacing-3);
   background: var(--color-white-500);
-  border: none;
+  border-top: 1px solid;
+  border-color: var(--color-gray-300);
   text-align: left;
-  font-size: var(--font-size-14);
+  font-size: var(--font-size-16);
   cursor: pointer;
 
   &.start {
@@ -20,20 +26,15 @@
 }
 
 .panel {
-  padding: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-2) var(--spacing-5) var(--spacing-3);
   text-align: left;
-  font-size: var(--font-size-14);
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-150);
   background: #fff;
   transition: all 0.3s ease;
-
   &[hidden] {
     display: none;
   }
-}
-
-.item + .item {
-  border-top: 1px solid;
-  border-color: var(--color-gray-500);
 }
 
 .arrow {
