@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Celinejoo/design-system/compare/v1.1.0...v1.1.1) (2025-05-20)
+
+
+### Bug Fixes
+
+* css build ([d95914d](https://github.com/Celinejoo/design-system/commit/d95914dc9fecdc60c9fee88eda35a00e0510c8ac))
+
 # [1.1.0](https://github.com/Celinejoo/design-system/compare/v1.0.0...v1.1.0) (2025-05-20)
 
 
