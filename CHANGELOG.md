@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/Celinejoo/design-system/compare/v1.2.3...v1.2.4) (2025-05-20)
+
+
+### Bug Fixes
+
+* fix style ([8e5d1bc](https://github.com/Celinejoo/design-system/commit/8e5d1bc75cf719c565bcaf2d04edd9e5bb97d716))
+
 ## [1.2.3](https://github.com/Celinejoo/design-system/compare/v1.2.2...v1.2.3) (2025-05-20)
 
 
