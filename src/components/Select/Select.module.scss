@@ -1,0 +1,26 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.select {
+  border: 1px solid;
+  border-color: var(--color-gray-200);
+  border-radius: 6px;
+
+  &.sm {
+    padding: 6px var(--spacing-3);
+  }
+
+  &.md {
+    padding: var(--spacing-2) var(--spacing-4);
+  }
+  &.lg {
+    padding: 10px var(--spacing-4);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

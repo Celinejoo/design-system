@@ -6,6 +6,7 @@ export { Input } from "./components/Input";
 export { Radio } from "./components/Radio";
 export { RadioGroup } from "./components/Radio";
 export { Textarea } from "./components/Textarea";
+export { Select } from "./components/Select";
 
 export { injectCssVariables } from "./styles/utils/injectCssVariables";
 export { generateTypographyClasses } from "./styles/utils/generateTypographyClasses";
